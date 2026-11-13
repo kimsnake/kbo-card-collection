@@ -4,7 +4,7 @@
 <style>
 :root{font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;color:#18291f;background:#f4f7f5}*{box-sizing:border-box}body{margin:0}
 header{background:#173e31;color:#fff;padding:25px 18px}header .inner,main{max-width:1060px;margin:auto}header h1{font-size:26px;margin:0 0 5px}header p{margin:0;color:#d1e4d8}main{padding:18px}
-.tabs{display:flex;gap:8px;border-bottom:1px solid #cddbd1;margin:0 0 20px}.tab{border:0;background:transparent;color:#53675b;padding:12px 20px;font-size:16px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent}.tab[aria-selected="true"]{color:#126b45;border-color:#168556}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid #cddbd1;margin:0 0 20px}.tab{border:0;background:transparent;color:#53675b;padding:12px 20px;font-size:16px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent}.tab[aria-selected="true"]{color:#126b45;border-color:#168556}
 [hidden]{display:none!important}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 15px}input,select{border:1px solid #bacac0;border-radius:8px;padding:10px;font-size:15px;background:#fff}
 input{flex:2;min-width:180px}select{flex:1;min-width:130px}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}.item{background:#fff;padding:9px;border:1px solid #ddd;border-radius:10px}.item img{display:block;width:100%;aspect-ratio:3/4;object-fit:contain;background:#e5ece7}.name{font-weight:700;margin-top:6px}.meta{font-size:13px;color:#607165}.note,.muted{font-size:13px;color:#607165}.trade-intro{margin:0 0 15px}.trade{background:#fff;border:1px solid #d7e2da;border-radius:12px;padding:18px;margin:0 0 14px}.trade-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}.trade-head h3{font-size:17px;margin:0}.demo{font-size:12px;border-radius:20px;padding:4px 9px;color:#745300;background:#fff0bb;font-weight:700}.trade-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}.trade-side{background:#f5f8f6;border-radius:10px;padding:12px}.trade-side h4{margin:0 0 8px;font-size:14px}.trade-side ul{list-style:none;padding:0;margin:0}.trade-side li{padding:6px 0;border-top:1px solid #dfe7e0;font-size:14px}.trade-side li:first-child{border-top:0}.empty{padding:22px;background:white;border-radius:10px;color:#56675c;text-align:center}
 @media(max-width:600px){.trade-columns{grid-template-columns:1fr}.tab{flex:1}.gallery{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}}
@@ -14,6 +14,7 @@ input{flex:2;min-width:180px}select{flex:1;min-width:130px}.gallery{display:grid
 <nav class="tabs" role="tablist" aria-label="카드 도감 메뉴">
 <button id="tab-cards" class="tab" type="button" role="tab" aria-controls="panel-cards" aria-selected="true">카드목록</button>
 <button id="tab-trades" class="tab" type="button" role="tab" aria-controls="panel-trades" aria-selected="false">거래내역</button>
+<button id="tab-traded-cards" class="tab" type="button" role="tab" aria-controls="panel-traded-cards" aria-selected="false">거래카드목록</button>
 </nav>
 <section id="panel-cards" role="tabpanel" aria-labelledby="tab-cards">
 <p id="count">목록 불러오는 중…</p>
@@ -26,18 +27,23 @@ input{flex:2;min-width:180px}select{flex:1;min-width:130px}.gallery{display:grid
 <p class="trade-intro">한 번의 교환에서 카드 여러 장을 주고받을 수 있어. 실제 교환 기록이 없을 때는 가상 예시만 표시해.</p>
 <div id="trades-list"></div>
 </section>
+<section id="panel-traded-cards" role="tabpanel" aria-labelledby="tab-traded-cards" hidden>
+<p id="traded-count">거래 카드 목록 불러오는 중…</p>
+<p class="note">교환으로 다른 사람에게 준 카드의 사진을 기록해. 실제 거래만 표시하며 가상 거래는 제외해.</p>
+<div class="gallery" id="traded-gallery"></div>
+</section>
 </main>
 <script>
 const $=id=>document.getElementById(id);
 const teamNames={KIA:'KIA 타이거즈 기아',KT:'KT 위즈 kt wiz',LG:'LG 트윈스',NC:'NC 다이노스',SSG:'SSG 랜더스',두산:'두산 베어스',롯데:'롯데 자이언츠',삼성:'삼성 라이온즈',키움:'키움 히어로즈',한화:'한화 이글스'};
 const normalize=x=>String(x??'').toLowerCase().replace(/\s+/g,'');
-let cards=[];
-function setTab(which){const trade=which==='trades';$('panel-cards').hidden=trade;$('panel-trades').hidden=!trade;$('tab-cards').setAttribute('aria-selected',String(!trade));$('tab-trades').setAttribute('aria-selected',String(trade));location.hash=trade?'trades':'cards'}
-$('tab-cards').addEventListener('click',()=>setTab('cards'));$('tab-trades').addEventListener('click',()=>setTab('trades'));
+let cards=[],trades=[];
+function setTab(which){for(const name of ['cards','trades','traded-cards']){const active=name===which;$('panel-'+name).hidden=!active;$('tab-'+name).setAttribute('aria-selected',String(active))}location.hash=which}
+$('tab-cards').addEventListener('click',()=>setTab('cards'));$('tab-trades').addEventListener('click',()=>setTab('trades'));$('tab-traded-cards').addEventListener('click',()=>setTab('traded-cards'));
 function showCards(){
 const q=normalize($('search').value),team=$('team').value,type=$('type').value;
-const shown=cards.filter(c=>{const searchable=normalize([c.player,c.team,teamNames[c.team]||'',c.jersey_number,'등번호'+(c.jersey_number||'')].join(' '));return searchable.includes(q)&&(!team||c.team===team)&&(!type||c.card_type.includes(type))});
-$('count').textContent='전체 '+cards.length+'장 · 표시 '+shown.length+'장';
+const shown=cards.filter(c=>c.status==='보유').filter(c=>{const searchable=normalize([c.player,c.team,teamNames[c.team]||'',c.jersey_number,'등번호'+(c.jersey_number||'')].join(' '));return searchable.includes(q)&&(!team||c.team===team)&&(!type||c.card_type.includes(type))});
+$('count').textContent='보유 '+cards.filter(c=>c.status==='보유').length+'장 · 표시 '+shown.length+'장';
 $('gallery').replaceChildren();
 for(const c of shown){const el=document.createElement('article');el.className='item';const img=document.createElement('img');img.src=c.image+'?v=20261114-tabs';img.alt=c.player+' 카드';img.loading='lazy';const name=document.createElement('div');name.className='name';name.textContent=c.player;const meta=document.createElement('div');meta.className='meta';meta.textContent=c.team+' · '+(c.jersey_number?'No.'+c.jersey_number+' · ':'')+c.card_type;el.append(img,name,meta);$('gallery').append(el)}
 }
@@ -50,7 +56,18 @@ function drawSide(title,items){const side=document.createElement('div');side.cla
 function showTrades(records,isDemo){const root=$('trades-list');root.replaceChildren();if(!records.length){root.textContent='아직 교환 기록이 없어.';return}
 for(const [i,tr] of records.entries()){const article=document.createElement('article');article.className='trade';const head=document.createElement('div');head.className='trade-head';const title=document.createElement('h3');title.textContent=(tr.date||'날짜 미기록')+' · 교환 '+(i+1);head.append(title);if(isDemo){const badge=document.createElement('span');badge.className='demo';badge.textContent='가상 예시 · 실제 거래 아님';head.append(badge)}const cols=document.createElement('div');cols.className='trade-columns';cols.append(drawSide('내가 준 카드',tr.given||[]),drawSide('내가 받은 카드',tr.received||[]));article.append(head,cols);if(tr.note){const note=document.createElement('p');note.className='note';note.textContent=tr.note;article.append(note)}root.append(article)}
 }
-fetch('data/cards.json?v=20261114-tabs').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{cards=x;showCards()}).catch(()=>$('count').textContent='카드 목록을 불러오지 못했습니다.');
-fetch('data/trades.json?v=20261114-tabs').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{const trades=Array.isArray(x)?x:[];showTrades(trades.length?trades:demoTrades,!trades.length)}).catch(()=>showTrades(demoTrades,true));
-if(location.hash==='#trades')setTab('trades');
+function showTradedCards(){
+const root=$('traded-gallery');root.replaceChildren();
+const listed=new Map();
+function append(c,q){const id=c.id||[c.player,c.team,c.jersey_number,c.card_type].join('|');if(!listed.has(id))listed.set(id,{...c,quantity:0});listed.get(id).quantity+=q}
+for(const c of cards)if(c.status==='거래완료'||c.status==='거래됨'||c.status==='교환완료')append(c,Number(c.quantity)||1);
+for(const tr of trades)for(const given of tr.given||[]){let c=cards.find(c=>(given.card_id&&c.id===given.card_id)||(c.player===given.player&&c.team===given.team&&(!given.jersey_number||String(c.jersey_number)===String(given.jersey_number))&&(!given.card_type||c.card_type===given.card_type)));if(c&&!listed.has(c.id))append(c,Number(given.quantity)||1)}
+const rows=[...listed.values()];
+$('traded-count').textContent='거래한 카드 '+rows.length+'종';
+if(!rows.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='아직 거래한 카드가 없어. 첫 교환을 기록하면 여기에 카드 사진이 표시돼.';root.append(empty);return}
+for(const c of rows){const el=document.createElement('article');el.className='item';if(c.image){const img=document.createElement('img');img.src=c.image+'?v=20261114-traded';img.alt=c.player+' 거래 카드';img.loading='lazy';el.append(img)}const n=document.createElement('div');n.className='name';n.textContent=c.player;const m=document.createElement('div');m.className='meta';m.textContent=[c.team,c.jersey_number?'No.'+c.jersey_number:'',c.card_type,'거래 '+c.quantity+'장'].filter(Boolean).join(' · ');el.append(n,m);root.append(el)}
+}
+fetch('data/cards.json?v=20261114-traded').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{cards=x;showCards();showTradedCards()}).catch(()=>$('count').textContent='카드 목록을 불러오지 못했습니다.');
+fetch('data/trades.json?v=20261114-traded').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{trades=Array.isArray(x)?x:[];showTrades(trades.length?trades:demoTrades,!trades.length);showTradedCards()}).catch(()=>showTrades(demoTrades,true));
+if(['#cards','#trades','#traded-cards'].includes(location.hash))setTab(location.hash.slice(1));
 </script></body></html>
