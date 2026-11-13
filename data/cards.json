@@ -6,7 +6,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-01.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "17"
   },
   {
     "id": "P01-02",
@@ -15,7 +16,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-02.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "11"
   },
   {
     "id": "P01-03",
@@ -24,7 +26,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-03.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "32"
   },
   {
     "id": "P01-04",
@@ -33,7 +36,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-04.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "4"
   },
   {
     "id": "P01-05",
@@ -42,7 +46,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-05.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "47"
   },
   {
     "id": "P01-06",
@@ -51,7 +56,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-06.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "7"
   },
   {
     "id": "P01-07",
@@ -60,7 +66,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-07.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "36"
   },
   {
     "id": "P01-08",
@@ -69,7 +76,8 @@
     "card_type": "기록형 디자인",
     "status": "보유",
     "image": "images/p01-08.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "19"
   },
   {
     "id": "P01-09",
@@ -78,7 +86,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p01-09.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "99"
   },
   {
     "id": "P02-01",
@@ -87,7 +96,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-01.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "14"
   },
   {
     "id": "P02-02",
@@ -96,7 +106,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-02.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "10"
   },
   {
     "id": "P02-03",
@@ -105,7 +116,8 @@
     "card_type": "홀로",
     "status": "보유",
     "image": "images/p02-03.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "10"
   },
   {
     "id": "P02-04",
@@ -114,7 +126,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-04.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "55"
   },
   {
     "id": "P02-05",
@@ -123,7 +136,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-05.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "61"
   },
   {
     "id": "P02-06",
@@ -132,7 +146,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-06.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "32"
   },
   {
     "id": "P02-07",
@@ -141,7 +156,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-07.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "50"
   },
   {
     "id": "P02-08",
@@ -150,7 +166,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-08.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "3"
   },
   {
     "id": "P02-09",
@@ -159,7 +176,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p02-09.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "53"
   },
   {
     "id": "P03-01",
@@ -168,7 +186,8 @@
     "card_type": "기록형 디자인",
     "status": "보유",
     "image": "images/p03-01.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "25"
   },
   {
     "id": "P03-02",
@@ -177,7 +196,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p03-02.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "18"
   },
   {
     "id": "P03-03",
@@ -186,7 +206,8 @@
     "card_type": "홀로",
     "status": "보유",
     "image": "images/p03-03.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "13"
   },
   {
     "id": "P03-04",
@@ -195,7 +216,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p03-04.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "7"
   },
   {
     "id": "P03-05",
@@ -204,7 +226,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p03-05.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "6"
   },
   {
     "id": "P03-06",
@@ -213,7 +236,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p03-06.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "52"
   },
   {
     "id": "P03-07",
@@ -222,7 +246,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p03-07.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "20"
   },
   {
     "id": "P03-08",
@@ -231,7 +256,8 @@
     "card_type": "기록형 디자인",
     "status": "보유",
     "image": "images/p03-08.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "13"
   },
   {
     "id": "P03-09",
@@ -240,7 +266,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p03-09.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "23"
   },
   {
     "id": "P04-01",
@@ -249,7 +276,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p04-01.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "44"
   },
   {
     "id": "P04-02",
@@ -258,7 +286,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p04-02.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "47"
   },
   {
     "id": "P04-03",
@@ -267,7 +296,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p04-03.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "56"
   },
   {
     "id": "P04-04",
@@ -276,7 +306,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p04-04.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "10"
   },
   {
     "id": "P04-05",
@@ -285,7 +316,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p04-05.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "55"
   },
   {
     "id": "P04-06",
@@ -294,7 +326,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p04-06.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "9"
   },
   {
     "id": "P04-07",
@@ -303,7 +336,8 @@
     "card_type": "기록형 디자인",
     "status": "보유",
     "image": "images/p04-07.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "50"
   },
   {
     "id": "P04-08",
@@ -312,7 +346,8 @@
     "card_type": "기록형 디자인",
     "status": "보유",
     "image": "images/p04-08.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "25"
   },
   {
     "id": "P04-09",
@@ -321,7 +356,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p04-09.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "27"
   },
   {
     "id": "P05-01",
@@ -330,7 +366,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-01.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "51"
   },
   {
     "id": "P05-02",
@@ -339,7 +376,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-02.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "15"
   },
   {
     "id": "P05-03",
@@ -348,7 +386,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-03.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "60"
   },
   {
     "id": "P05-04",
@@ -357,7 +396,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-04.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "19"
   },
   {
     "id": "P05-05",
@@ -366,7 +406,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-05.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "17"
   },
   {
     "id": "P05-06",
@@ -375,7 +416,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-06.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "33"
   },
   {
     "id": "P05-07",
@@ -384,7 +426,8 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-07.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "41"
   },
   {
     "id": "P05-08",
@@ -393,7 +436,8 @@
     "card_type": "홀로",
     "status": "보유",
     "image": "images/p05-08.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "53"
   },
   {
     "id": "P05-09",
@@ -402,6 +446,7 @@
     "card_type": "일반 디자인",
     "status": "보유",
     "image": "images/p05-09.jpg",
-    "verification": "사진상 판독·재확인 권장"
+    "verification": "사진상 판독·재확인 권장",
+    "jersey_number": "50"
   }
 ]
