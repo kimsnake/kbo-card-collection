@@ -1,0 +1,452 @@
+[
+  {
+    "id": "P01-01",
+    "player": "현도훈",
+    "team": "롯데",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-01.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-02",
+    "player": "조상우",
+    "team": "KIA",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-02.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-03",
+    "player": "김헌곤",
+    "team": "삼성",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-03.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-04",
+    "player": "오윤석",
+    "team": "KT",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-04.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-05",
+    "player": "전의산",
+    "team": "SSG",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-05.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-06",
+    "player": "김주원",
+    "team": "NC",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-06.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-07",
+    "player": "이형종",
+    "team": "키움",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-07.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-08",
+    "player": "조병현",
+    "team": "SSG",
+    "card_type": "기록형(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-08.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P01-09",
+    "player": "류현진",
+    "team": "한화",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p01-09.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-01",
+    "player": "서건창",
+    "team": "키움",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-01.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-02",
+    "player": "김웅빈",
+    "team": "키움",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-02.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-03",
+    "player": "김웅빈",
+    "team": "키움",
+    "card_type": "홀로(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-03.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-04",
+    "player": "이우성",
+    "team": "NC",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-04.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-05",
+    "player": "전병우",
+    "team": "삼성",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-05.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-06",
+    "player": "김재환",
+    "team": "SSG",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-06.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-07",
+    "player": "박상준",
+    "team": "KIA",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-07.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-08",
+    "player": "최원준",
+    "team": "KT",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-08.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P02-09",
+    "player": "박승욱",
+    "team": "롯데",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p02-09.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-01",
+    "player": "김태연",
+    "team": "한화",
+    "card_type": "기록형(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-01.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-02",
+    "player": "원태인",
+    "team": "삼성",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-02.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-03",
+    "player": "김한별",
+    "team": "NC",
+    "card_type": "홀로(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-03.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-04",
+    "player": "장두성",
+    "team": "롯데",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-04.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-05",
+    "player": "구본혁",
+    "team": "LG",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-05.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-06",
+    "player": "권동진",
+    "team": "KT",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-06.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-07",
+    "player": "우강훈",
+    "team": "LG",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-07.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-08",
+    "player": "전민재",
+    "team": "롯데",
+    "card_type": "기록형(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-08.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P03-09",
+    "player": "강승호",
+    "team": "두산",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p03-09.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-01",
+    "player": "이태양",
+    "team": "KIA",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-01.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-02",
+    "player": "곽빈",
+    "team": "두산",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-02.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-03",
+    "player": "최준용",
+    "team": "롯데",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-03.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-04",
+    "player": "안상현",
+    "team": "SSG",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-04.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-05",
+    "player": "송찬의",
+    "team": "LG",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-05.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-06",
+    "player": "류현인",
+    "team": "KT",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-06.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-07",
+    "player": "강백호",
+    "team": "한화",
+    "card_type": "기록형(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-07.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-08",
+    "player": "양의지",
+    "team": "두산",
+    "card_type": "기록형(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-08.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P04-09",
+    "player": "이민우",
+    "team": "한화",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p04-09.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-01",
+    "player": "조수행",
+    "team": "두산",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-01.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-02",
+    "player": "박재현",
+    "team": "KIA",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-02.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-03",
+    "player": "장찬희",
+    "team": "삼성",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-03.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-04",
+    "player": "임지민",
+    "team": "NC",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-04.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-05",
+    "player": "박해민",
+    "team": "LG",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-05.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-06",
+    "player": "이정훈",
+    "team": "KT",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-06.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-07",
+    "player": "안우진",
+    "team": "키움",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-07.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-08",
+    "player": "김민혁",
+    "team": "KT",
+    "card_type": "홀로(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-08.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  },
+  {
+    "id": "P05-09",
+    "player": "강백호",
+    "team": "한화",
+    "card_type": "일반(잠정)",
+    "confidence": "사진상 추정",
+    "status": "보유",
+    "image": "images/p05-09.jpg",
+    "notes": "사진 기준 선수명·구단 재검수 필요"
+  }
+]
