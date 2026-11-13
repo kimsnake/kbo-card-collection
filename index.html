@@ -1,1 +1,56 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KBO 카드 도감</title><style>body{font-family:system-ui,sans-serif;margin:0;background:#f4f7f5;color:#18291f}header{background:#173e31;color:white;padding:24px 18px}main{max-width:1060px;margin:auto;padding:20px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}input,select{border:1px solid #bacac0;border-radius:8px;padding:10px;font-size:16px}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}.item{background:white;padding:9px;border:1px solid #ddd;border-radius:10px}.item img{width:100%;aspect-ratio:3/4;object-fit:contain;background:#e5ece7}.name{font-weight:700}.meta{font-size:13px;color:#607165}.note{font-size:12px;color:#607165}</style></head><body><header><h1>⚾ KBO 카드 도감</h1><p>2026 Official Collection Card+</p></header><main><p id="count">목록 불러오는 중…</p><div class="controls"><input id="search" placeholder="선수명·구단·등번호 검색"><select id="team"><option value="">전체 구단</option><option value="KIA">KIA</option><option value="KT">KT</option><option value="LG">LG</option><option value="NC">NC</option><option value="SSG">SSG</option><option value="두산">두산</option><option value="롯데">롯데</option><option value="삼성">삼성</option><option value="키움">키움</option><option value="한화">한화</option></select><select id="type"><option value="">전체 종류</option><option value="일반">일반</option><option value="기록형">기록형</option><option value="홀로">홀로</option></select></div><div class="gallery" id="gallery"></div><p class="note">카드 도감 · 교환 내역은 별도 기록합니다.</p></main><script>let cards=[];const g=document.querySelector('#gallery'),s=document.querySelector('#search'),t=document.querySelector('#type'),team=document.querySelector('#team');const teamNames={KIA:'KIA 타이거즈 기아',KT:'KT 위즈 kt wiz',LG:'LG 트윈스',NC:'NC 다이노스',SSG:'SSG 랜더스',두산:'두산 베어스',롯데:'롯데 자이언츠',삼성:'삼성 라이온즈',키움:'키움 히어로즈',한화:'한화 이글스'};function normalize(x){return String(x??'').toLowerCase().replace(/\s+/g,'')}function show(){let query=normalize(s.value);let a=cards.filter(x=>{let searchable=normalize([x.player,x.team,teamNames[x.team]||'',x.jersey_number,'등번호'+(x.jersey_number||'')].join(' '));return searchable.includes(query)&&(!team.value||x.team===team.value)&&(!t.value||x.card_type.includes(t.value))});document.querySelector('#count').textContent=`전체 ${cards.length}장 · 표시 ${a.length}장`;g.replaceChildren();a.forEach(x=>{let el=document.createElement('div');el.className='item';let img=document.createElement('img');img.src=x.image+'?v=20261114b';img.alt=x.player+' 카드';let n=document.createElement('div');n.className='name';n.textContent=x.player;let d=document.createElement('div');d.className='meta';d.textContent=x.team+' · '+(x.jersey_number?'No.'+x.jersey_number+' · ':'등번호 미확인 · ')+x.card_type;el.append(img,n,d);g.append(el)})}s.addEventListener('input',show);t.addEventListener('change',show);team.addEventListener('change',show);fetch('data/cards.json?v=20261114-jersey').then(r=>r.json()).then(x=>{cards=x;show()}).catch(()=>document.querySelector('#count').textContent='파일은 웹 서버에서 열어주세요.');</script></body></html>
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KBO 카드 도감</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;color:#18291f;background:#f4f7f5}*{box-sizing:border-box}body{margin:0}
+header{background:#173e31;color:#fff;padding:25px 18px}header .inner,main{max-width:1060px;margin:auto}header h1{font-size:26px;margin:0 0 5px}header p{margin:0;color:#d1e4d8}main{padding:18px}
+.tabs{display:flex;gap:8px;border-bottom:1px solid #cddbd1;margin:0 0 20px}.tab{border:0;background:transparent;color:#53675b;padding:12px 20px;font-size:16px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent}.tab[aria-selected="true"]{color:#126b45;border-color:#168556}
+[hidden]{display:none!important}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 15px}input,select{border:1px solid #bacac0;border-radius:8px;padding:10px;font-size:15px;background:#fff}
+input{flex:2;min-width:180px}select{flex:1;min-width:130px}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}.item{background:#fff;padding:9px;border:1px solid #ddd;border-radius:10px}.item img{display:block;width:100%;aspect-ratio:3/4;object-fit:contain;background:#e5ece7}.name{font-weight:700;margin-top:6px}.meta{font-size:13px;color:#607165}.note,.muted{font-size:13px;color:#607165}.trade-intro{margin:0 0 15px}.trade{background:#fff;border:1px solid #d7e2da;border-radius:12px;padding:18px;margin:0 0 14px}.trade-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}.trade-head h3{font-size:17px;margin:0}.demo{font-size:12px;border-radius:20px;padding:4px 9px;color:#745300;background:#fff0bb;font-weight:700}.trade-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}.trade-side{background:#f5f8f6;border-radius:10px;padding:12px}.trade-side h4{margin:0 0 8px;font-size:14px}.trade-side ul{list-style:none;padding:0;margin:0}.trade-side li{padding:6px 0;border-top:1px solid #dfe7e0;font-size:14px}.trade-side li:first-child{border-top:0}.empty{padding:22px;background:white;border-radius:10px;color:#56675c;text-align:center}
+@media(max-width:600px){.trade-columns{grid-template-columns:1fr}.tab{flex:1}.gallery{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}}
+</style></head>
+<body><header><div class="inner"><h1>⚾ KBO 카드 도감</h1><p>2026 Official Collection Card+</p></div></header>
+<main>
+<nav class="tabs" role="tablist" aria-label="카드 도감 메뉴">
+<button id="tab-cards" class="tab" type="button" role="tab" aria-controls="panel-cards" aria-selected="true">카드목록</button>
+<button id="tab-trades" class="tab" type="button" role="tab" aria-controls="panel-trades" aria-selected="false">거래내역</button>
+</nav>
+<section id="panel-cards" role="tabpanel" aria-labelledby="tab-cards">
+<p id="count">목록 불러오는 중…</p>
+<div class="controls"><input id="search" placeholder="선수명·구단·등번호 검색" aria-label="카드 검색">
+<select id="team" aria-label="구단 필터"><option value="">전체 구단</option><option>KIA</option><option>KT</option><option>LG</option><option>NC</option><option>SSG</option><option>두산</option><option>롯데</option><option>삼성</option><option>키움</option><option>한화</option></select>
+<select id="type" aria-label="카드 종류 필터"><option value="">전체 종류</option><option value="일반">일반</option><option value="기록형">기록형</option><option value="홀로">홀로</option></select></div>
+<div class="gallery" id="gallery"></div>
+</section>
+<section id="panel-trades" role="tabpanel" aria-labelledby="tab-trades" hidden>
+<p class="trade-intro">한 번의 교환에서 카드 여러 장을 주고받을 수 있어. 실제 교환 기록이 없을 때는 가상 예시만 표시해.</p>
+<div id="trades-list"></div>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const teamNames={KIA:'KIA 타이거즈 기아',KT:'KT 위즈 kt wiz',LG:'LG 트윈스',NC:'NC 다이노스',SSG:'SSG 랜더스',두산:'두산 베어스',롯데:'롯데 자이언츠',삼성:'삼성 라이온즈',키움:'키움 히어로즈',한화:'한화 이글스'};
+const normalize=x=>String(x??'').toLowerCase().replace(/\s+/g,'');
+let cards=[];
+function setTab(which){const trade=which==='trades';$('panel-cards').hidden=trade;$('panel-trades').hidden=!trade;$('tab-cards').setAttribute('aria-selected',String(!trade));$('tab-trades').setAttribute('aria-selected',String(trade));location.hash=trade?'trades':'cards'}
+$('tab-cards').addEventListener('click',()=>setTab('cards'));$('tab-trades').addEventListener('click',()=>setTab('trades'));
+function showCards(){
+const q=normalize($('search').value),team=$('team').value,type=$('type').value;
+const shown=cards.filter(c=>{const searchable=normalize([c.player,c.team,teamNames[c.team]||'',c.jersey_number,'등번호'+(c.jersey_number||'')].join(' '));return searchable.includes(q)&&(!team||c.team===team)&&(!type||c.card_type.includes(type))});
+$('count').textContent='전체 '+cards.length+'장 · 표시 '+shown.length+'장';
+$('gallery').replaceChildren();
+for(const c of shown){const el=document.createElement('article');el.className='item';const img=document.createElement('img');img.src=c.image+'?v=20261114-tabs';img.alt=c.player+' 카드';img.loading='lazy';const name=document.createElement('div');name.className='name';name.textContent=c.player;const meta=document.createElement('div');meta.className='meta';meta.textContent=c.team+' · '+(c.jersey_number?'No.'+c.jersey_number+' · ':'')+c.card_type;el.append(img,name,meta);$('gallery').append(el)}
+}
+for(const id of ['search','team','type'])$(id).addEventListener(id==='search'?'input':'change',showCards);
+const demoTrades=[
+{id:'DEMO-001',date:'2026-11-14',given:[{player:'류현진',team:'한화',card_type:'일반 디자인',quantity:1},{player:'김주원',team:'NC',card_type:'일반 디자인',quantity:2}],received:[{player:'원태인',team:'삼성',card_type:'일반 디자인',quantity:1}],note:'가상 교환 예시 · 3장 ↔ 1장',demo:true},
+{id:'DEMO-002',date:'2026-11-14',given:[{player:'박해민',team:'LG',card_type:'일반 디자인',quantity:1}],received:[{player:'곽빈',team:'두산',card_type:'일반 디자인',quantity:1},{player:'김태연',team:'한화',card_type:'기록형 디자인',quantity:1}],note:'가상 교환 예시 · 1장 ↔ 2장',demo:true}
+];
+function drawSide(title,items){const side=document.createElement('div');side.className='trade-side';const h=document.createElement('h4');h.textContent=title;const ul=document.createElement('ul');for(const it of items){const li=document.createElement('li');li.textContent=[it.player,it.team,it.card_type].filter(Boolean).join(' · ')+' × '+(it.quantity||1)+'장';ul.append(li)}side.append(h,ul);return side}
+function showTrades(records,isDemo){const root=$('trades-list');root.replaceChildren();if(!records.length){root.textContent='아직 교환 기록이 없어.';return}
+for(const [i,tr] of records.entries()){const article=document.createElement('article');article.className='trade';const head=document.createElement('div');head.className='trade-head';const title=document.createElement('h3');title.textContent=(tr.date||'날짜 미기록')+' · 교환 '+(i+1);head.append(title);if(isDemo){const badge=document.createElement('span');badge.className='demo';badge.textContent='가상 예시 · 실제 거래 아님';head.append(badge)}const cols=document.createElement('div');cols.className='trade-columns';cols.append(drawSide('내가 준 카드',tr.given||[]),drawSide('내가 받은 카드',tr.received||[]));article.append(head,cols);if(tr.note){const note=document.createElement('p');note.className='note';note.textContent=tr.note;article.append(note)}root.append(article)}
+}
+fetch('data/cards.json?v=20261114-tabs').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{cards=x;showCards()}).catch(()=>$('count').textContent='카드 목록을 불러오지 못했습니다.');
+fetch('data/trades.json?v=20261114-tabs').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{const trades=Array.isArray(x)?x:[];showTrades(trades.length?trades:demoTrades,!trades.length)}).catch(()=>showTrades(demoTrades,true));
+if(location.hash==='#trades')setTab('trades');
+</script></body></html>
