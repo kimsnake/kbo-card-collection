@@ -8,3 +8,5 @@
 - `index.html`: 카드 검색 및 구단·종류별 필터
 
 **주의:** 홀로 및 기록형 디자인은 잠정 분류이며, 사진이 일부 기울어져 바인더 가장자리가 보일 수 있습니다. 원본 사진이나 개인정보는 포함하지 않았습니다. 카드 판매·수익 정보는 수집하지 않습니다.
+
+https://kimsnake.github.io/kbo-card-collection/?v=20261114-traded&utm_source=chatgpt.com
