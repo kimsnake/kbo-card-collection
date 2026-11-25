@@ -19,7 +19,7 @@ input{flex:2;min-width:180px}select{flex:1;min-width:130px}.gallery{display:grid
 <p id="count">목록 불러오는 중…</p>
 <div class="controls"><input id="search" placeholder="선수명·구단·등번호 검색" aria-label="카드 검색">
 <select id="team" aria-label="구단 필터"><option value="">전체 구단</option><option>KIA</option><option>KT</option><option>LG</option><option>NC</option><option>SSG</option><option>두산</option><option>롯데</option><option>삼성</option><option>키움</option><option>한화</option></select>
-<select id="type" aria-label="카드 종류 필터"><option value="">전체 종류</option><option value="일반">일반</option><option value="기록형">기록형</option><option value="홀로">홀로</option><option value="특수">특수 디자인</option><option value="세로형">세로형 디자인</option></select></div>
+<select id="type" aria-label="카드 종류 필터"><option value="">전체 종류</option><option value="노멀">노멀</option><option value="레코드">레코드</option><option value="홀로">홀로</option><option value="홀로 패러렐">홀로 패러렐</option><option value="알파벳">알파벳</option><option value="승리부적">승리부적</option><option value="사인">사인</option><option value="분류 미확인">분류 미확인</option></select></div>
 <div class="gallery" id="gallery"></div>
 </section>
 <section id="panel-trades" role="tabpanel" aria-labelledby="tab-trades" hidden>
@@ -36,7 +36,7 @@ function setTab(which){for(const name of ['cards','trades']){const active=name==
 $('tab-cards').addEventListener('click',()=>setTab('cards'));$('tab-trades').addEventListener('click',()=>setTab('trades'));
 function showCards(){
 const q=normalize($('search').value),team=$('team').value,type=$('type').value;
-const shown=cards.filter(c=>c.status==='보유').filter(c=>{const searchable=normalize([c.player,c.team,teamNames[c.team]||'',c.jersey_number,'등번호'+(c.jersey_number||'')].join(' '));return searchable.includes(q)&&(!team||c.team===team)&&(!type||c.card_type.includes(type))});
+const shown=cards.filter(c=>c.status==='보유').filter(c=>{const searchable=normalize([c.player,c.team,teamNames[c.team]||'',c.jersey_number,'등번호'+(c.jersey_number||'')].join(' '));return searchable.includes(q)&&(!team||c.team===team)&&(!type||c.card_type===type)});
 const pending=trades.filter(tr=>tr.status==='given_variant_confirmation_needed').length;const counted=cards.filter(c=>c.status==='보유').length; $('count').textContent=pending?('실제 보유 '+(counted-pending)+'장 · '+shown.length+'개 항목 표시 (강백호 교환 종류 확인 필요)'):('보유 '+counted+'장 · 표시 '+shown.length+'장');
 $('gallery').replaceChildren();
 for(const c of shown){const el=document.createElement('article');el.className='item';const img=document.createElement('img');img.src=c.image+'?v=20261126';img.alt=c.player+' 카드';img.loading='lazy';img.onerror=()=>{const empty=document.createElement('div');empty.className='img-missing';empty.textContent='사진 업로드 전';img.replaceWith(empty)};const name=document.createElement('div');name.className='name';name.textContent=c.player;const meta=document.createElement('div');meta.className='meta';meta.textContent=c.team+' · '+(c.jersey_number?'No.'+c.jersey_number+' · ':'')+c.card_type+(c.trade_variant_check?' · 거래 여부 확인 필요':'');el.append(img,name,meta);$('gallery').append(el)}
@@ -72,7 +72,7 @@ side.append(list);return side
 function showTrades(records,isDemo){const root=$('trades-list');root.replaceChildren();if(!records.length){root.textContent='아직 교환 기록이 없어.';return}
 for(const [i,tr] of records.entries()){const article=document.createElement('article');article.className='trade';const head=document.createElement('div');head.className='trade-head';const title=document.createElement('h3');title.textContent=(tr.date||'날짜 미기록')+' · 교환 '+(i+1);head.append(title);if(isDemo){const badge=document.createElement('span');badge.className='demo';badge.textContent='가상 예시 · 실제 거래 아님';head.append(badge)}const cols=document.createElement('div');cols.className='trade-columns';cols.append(drawSide('내가 준 카드',tr.given||[]),drawSide('내가 받은 카드',tr.received||[]));article.append(head,cols);if(tr.note){const note=document.createElement('p');note.className='note';note.textContent=tr.note;article.append(note)}root.append(article)}
 }
-fetch('data/cards.json?v=20261126-trade-images').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{cards=x;showCards();showTrades(trades.length?trades:demoTrades,!trades.length)}).catch(()=>$('count').textContent='카드 목록을 불러오지 못했습니다.');
-fetch('data/trades.json?v=20261126-trade-images').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{trades=Array.isArray(x)?x:[];showTrades(trades.length?trades:demoTrades,!trades.length);if(cards.length)showCards()}).catch(()=>showTrades(demoTrades,true));
+fetch('data/cards.json?v=20261126-kbo-types').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{cards=x;showCards();showTrades(trades.length?trades:demoTrades,!trades.length)}).catch(()=>$('count').textContent='카드 목록을 불러오지 못했습니다.');
+fetch('data/trades.json?v=20261126-kbo-types').then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{trades=Array.isArray(x)?x:[];showTrades(trades.length?trades:demoTrades,!trades.length);if(cards.length)showCards()}).catch(()=>showTrades(demoTrades,true));
 if(['#cards','#trades'].includes(location.hash))setTab(location.hash.slice(1));else if(location.hash==='#traded-cards')setTab('trades');
 </script></body></html>
