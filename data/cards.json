@@ -337,7 +337,8 @@
     "status": "보유",
     "image": "images/p04-07.jpg",
     "verification": "사진상 판독·재확인 권장",
-    "jersey_number": "50"
+    "jersey_number": "50",
+    "trade_variant_check": "2026-11-26 교환 강백호 카드의 종류 확인 필요"
   },
   {
     "id": "P04-08",
@@ -404,10 +405,12 @@
     "player": "박해민",
     "team": "LG",
     "card_type": "일반 디자인",
-    "status": "보유",
+    "status": "거래완료",
     "image": "images/p05-05.jpg",
     "verification": "사진상 판독·재확인 권장",
-    "jersey_number": "17"
+    "jersey_number": "17",
+    "traded_at": "2026-11-26",
+    "trade_id": "T-20261126-02"
   },
   {
     "id": "P05-06",
@@ -447,6 +450,139 @@
     "status": "보유",
     "image": "images/p05-09.jpg",
     "verification": "사진상 판독·재확인 권장",
-    "jersey_number": "50"
+    "jersey_number": "50",
+    "trade_variant_check": "2026-11-26 교환 강백호 카드의 종류 확인 필요"
+  },
+  {
+    "id": "P06-01",
+    "player": "박치국",
+    "team": "두산",
+    "jersey_number": "1",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-01.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-02",
+    "player": "박지훈",
+    "team": "두산",
+    "jersey_number": "37",
+    "card_type": "특수 디자인",
+    "status": "보유",
+    "image": "images/p06-02.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-03",
+    "player": "최인호",
+    "team": "한화",
+    "jersey_number": "41",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-03.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-04",
+    "player": "박성한",
+    "team": "SSG",
+    "jersey_number": "2",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-04.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-05",
+    "player": "홍민기",
+    "team": "롯데",
+    "jersey_number": "38",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-05.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-06",
+    "player": "최정",
+    "team": "SSG",
+    "jersey_number": "14",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-06.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-07",
+    "player": "박정훈",
+    "team": "키움",
+    "jersey_number": "94",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-07.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-08",
+    "player": "채현우",
+    "team": "SSG",
+    "jersey_number": "15",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-08.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P06-09",
+    "player": "김정우",
+    "team": "두산",
+    "jersey_number": "16",
+    "card_type": "일반 디자인",
+    "status": "보유",
+    "image": "images/p06-09.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "추가분"
+  },
+  {
+    "id": "P07-01",
+    "player": "김서현",
+    "team": "한화",
+    "jersey_number": "44",
+    "card_type": "세로형 디자인",
+    "status": "보유",
+    "image": "images/p07-01.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "교환 수령"
+  },
+  {
+    "id": "P07-02",
+    "player": "김동주",
+    "team": "두산",
+    "jersey_number": "18",
+    "card_type": "세로형 디자인",
+    "status": "보유",
+    "image": "images/p07-02.jpg",
+    "verification": "사진 판독 · 디자인 분류는 외형 기준",
+    "acquired_at": "2026-11-26",
+    "acquisition": "교환 수령"
   }
 ]
