@@ -9,7 +9,7 @@
         "team": "한화",
         "jersey_number": "50",
         "quantity": 1,
-        "card_type": "일반 디자인",
+        "card_type": "노멀",
         "card_id": "P05-09"
       }
     ],
@@ -18,7 +18,7 @@
         "player": "김서현",
         "team": "한화",
         "jersey_number": "44",
-        "card_type": "세로형 디자인",
+        "card_type": "분류 미확인",
         "card_id": "P07-01",
         "quantity": 1
       }
@@ -35,7 +35,7 @@
         "player": "박해민",
         "team": "LG",
         "jersey_number": "17",
-        "card_type": "일반 디자인",
+        "card_type": "노멀",
         "card_id": "P05-05",
         "quantity": 1
       }
@@ -45,7 +45,7 @@
         "player": "김동주",
         "team": "두산",
         "jersey_number": "18",
-        "card_type": "세로형 디자인",
+        "card_type": "분류 미확인",
         "card_id": "P07-02",
         "quantity": 1
       }
