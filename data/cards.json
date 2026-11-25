@@ -337,8 +337,7 @@
     "status": "보유",
     "image": "images/p04-07.jpg",
     "verification": "사진상 판독·재확인 권장",
-    "jersey_number": "50",
-    "trade_variant_check": "2026-11-26 교환 강백호 카드의 종류 확인 필요"
+    "jersey_number": "50"
   },
   {
     "id": "P04-08",
@@ -447,11 +446,12 @@
     "player": "강백호",
     "team": "한화",
     "card_type": "일반 디자인",
-    "status": "보유",
+    "status": "거래완료",
     "image": "images/p05-09.jpg",
     "verification": "사진상 판독·재확인 권장",
     "jersey_number": "50",
-    "trade_variant_check": "2026-11-26 교환 강백호 카드의 종류 확인 필요"
+    "traded_at": "2026-11-26",
+    "trade_id": "T-20261126-01"
   },
   {
     "id": "P06-01",
